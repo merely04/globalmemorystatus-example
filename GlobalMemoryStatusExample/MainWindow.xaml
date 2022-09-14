@@ -37,7 +37,10 @@
                     <converters:ByteSizeConverter x:Key="ByteSizeConverter" />
                 </StackPanel.Resources>
 
-                <TextBlock Text="{Binding dwLength, Mode=OneWay, Converter={StaticResource ByteSizeConverter}}" />
+                <TextBlock>
+                    <Run Text="{Binding dwMemoryLoad, Mode=OneWay}" />
+                    <Run Text="%" />
+                </TextBlock>
                 <TextBlock Text="{Binding ullTotalPhys, Mode=OneWay, Converter={StaticResource ByteSizeConverter}}" />
                 <TextBlock Text="{Binding ullAvailPhys, Mode=OneWay, Converter={StaticResource ByteSizeConverter}}" />
                 <TextBlock Text="{Binding ullTotalPageFile, Mode=OneWay, Converter={StaticResource ByteSizeConverter}}" />
